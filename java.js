@@ -1,4 +1,12 @@
-﻿const startButton = document.getElementById('start-btn');
+function startGame() {
+  console.log('A função startGame foi chamada!'); // ADICIONA ESTA LINHA
+  startButton.classList.add('hide');
+  shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+  currentQuestionIndex = 0;
+  userAnswers = []; // Limpa as respostas anteriores
+  setNextQuestion();
+}
+const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const prevButton = document.getElementById('prev-btn');
 const quizContainer = document.getElementById('quiz-container');
